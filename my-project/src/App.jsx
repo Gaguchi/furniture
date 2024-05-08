@@ -69,6 +69,7 @@ function Table() {
     />
   ) : null;
 }
+
 function Chair() {
   const { gl, scene, camera } = useThree();
   const [gltf, setGltf] = useState(null);
@@ -101,6 +102,7 @@ function Chair() {
     />
   ) : null;
 }
+
 function Lights() {
   const { scene } = useThree();
   const pointLightRef = useRef();
@@ -204,3 +206,20 @@ function App() {
 }
 
 export default App
+
+
+function Shop() {
+  return (
+    <>
+      <Canvas style={{ height: '100%', width: '100%' }}>
+        <Lights />
+        <Suspense fallback={null}>
+          <Chair />
+        </Suspense>
+      </Canvas>
+    </>
+  )
+}
+
+
+export { Shop };

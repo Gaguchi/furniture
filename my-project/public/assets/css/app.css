@@ -2288,3 +2288,7 @@ a:hover,[class~=h1],[class~=h3],[class~=h2]{color:#000;}.position-h-center.anima
 body{
   background-color: #ced3cd;
 }
+
+.shop{
+  background-color: transparent;
+}
